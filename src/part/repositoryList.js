@@ -3,19 +3,26 @@ import React, { useState, useEffect } from "react";
 import GithubApi from "constants/api/github";
 import { ReactComponent as IconFile } from "assets/icon/file.svg";
 import Input from "components/Input";
+import Loading from "components/Loading";
 export default function RepositoryList({ serach }) {
-  const [repoData, setRepoData] = useState([]);
+  const [fetching, setFetching] = useState({
+    loading: false,
+    data: [],
+    error: null,
+  });
   useEffect(() => {
     getAllData();
   }, [, serach]);
 
   const getAllData = async () => {
     const username = serach || "RianKhanafi";
+
+    setFetching({ loading: true, data: [], error: null });
     try {
       const data = await GithubApi.getAll(username);
-      setRepoData(data);
+      setFetching({ loading: false, data: data, error: null });
     } catch (error) {
-      console.log(error);
+      setFetching({ loading: false, data: [], error: error });
     }
   };
 
@@ -23,11 +30,13 @@ export default function RepositoryList({ serach }) {
     <div className="repositories-list">
       <h1>
         <IconFile className="icon" />
-        Repositories <span> {repoData.length}</span>
+        Repositories <span> {(fetching?.data ?? []).length}</span>
       </h1>
 
       <Input className="input" placeholder="Find a repository..." />
-      {repoData.map((elm, index) => {
+      {fetching.loading && <Loading />}
+      {fetching.error && fetching.data.length === 0 && <Error />}
+      {(fetching?.data ?? []).map((elm, index) => {
         return (
           <Card
             key={index}
