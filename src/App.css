@@ -4,6 +4,8 @@
 
 .repositories-list{
   padding-bottom: 96px;
+  height: auto;
+  position: relative;
 }
 .repositories-list .icon{
   margin-right: 10px;
