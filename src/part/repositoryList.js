@@ -56,16 +56,18 @@ const RepositoryList = ({ serach }) => {
 
   return (
     <div className="repositories-list">
-      <h1>
-        <IconFile className="icon" />
-        Repositories <span> {(fetching?.data ?? []).length}</span>
-      </h1>
+      <div style={{ display: "sitcky" }}>
+        <h1>
+          <IconFile className="icon" />
+          Repositories <span> {page.total}</span>
+        </h1>
 
-      <Input
-        className="input"
-        placeholder="Find a repository..."
-        onChange={(e) => setFilter(e.target.value)}
-      />
+        <Input
+          className="input"
+          placeholder="Find a repository..."
+          onChange={(e) => setFilter(e.target.value)}
+        />
+      </div>
       {fetching.error && fetching.data.length === 0 && <Error />}
       {!fetching?.data?.length && !fetching?.loading && !fetching.error && (
         <span>No Repository</span>
