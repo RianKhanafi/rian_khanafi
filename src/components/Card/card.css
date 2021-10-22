@@ -3,6 +3,7 @@
     border: 1px solid #eaeaea;
     padding: 20px;
     transition: .3s ease-in-out;
+    margin-bottom:20px;
 }
 
 .card:hover {
@@ -36,7 +37,7 @@
 .card .card-content .c-footer-section .icon-rounded {
     width: 15px;
     height: 15px;
-    background-color: yellow;
+    /* background-color: yellow; */
     border-radius: 100%;
 }
 
@@ -46,4 +47,8 @@
 
 .card .card-content .c-footer-section div:nth-child(2) {
     margin-right: 10px;
+}
+
+.card .card-content .c-footer-section div:last-child .star {
+    margin-right: 5px;
 }
