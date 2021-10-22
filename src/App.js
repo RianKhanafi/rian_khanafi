@@ -1,16 +1,26 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { useEffect } from "react";
-import GithubApi from "constants/api/github";
 import Layout from "components/layout";
-import Card from "components/Card";
+import GithubProfile from "part/githubProfile";
 import RepositoryList from "part/repositoryList";
+import { useEffect, useState } from "react";
+import "./App.css";
 function App() {
+  const [serach, setSearch] = useState("RianKhanafi");
+
+  const hanleSearch = (e) => {
+    const timing = setTimeout(() => {
+      setSearch(e.target.value);
+    }, 1200);
+
+    return () => {
+      clearTimeout(timing);
+    };
+  };
+
   return (
-    <Layout>
-      <div className="App">
-        <RepositoryList />
-      </div>
+    <Layout
+      leftcontent={<GithubProfile serach={serach} hanleSearch={hanleSearch} />}
+    >
+      <RepositoryList serach={serach} />
     </Layout>
   );
 }

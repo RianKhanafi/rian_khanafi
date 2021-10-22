@@ -2,6 +2,9 @@
   /* text-align: center; */
 }
 
+.repositories-list{
+  padding-bottom: 96px;
+}
 .repositories-list .icon{
   margin-right: 10px;
 }
