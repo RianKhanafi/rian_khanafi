@@ -27,6 +27,18 @@
     flex: 5%;
 }
 
+.card .card-content .c-head-section .visibility{
+    border: 1px solid #717171;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 13px;
+    height: max-content;
+    width: max-content;
+    padding: 4px;
+    font-weight: 600;
+    color: #717171;
+}
+
 
 .card .card-content .c-footer-section{
     display: flex;
