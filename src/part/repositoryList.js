@@ -5,7 +5,7 @@ import { ReactComponent as IconFile } from "assets/icon/file.svg";
 import Input from "components/Input";
 import Loading from "components/Loading";
 import Error from "components/Error";
-export default function RepositoryList({ serach }) {
+const RepositoryList = ({ serach }) => {
   const [fetching, setFetching] = useState({
     loading: false,
     data: [],
@@ -50,4 +50,6 @@ export default function RepositoryList({ serach }) {
       })}
     </div>
   );
-}
+};
+
+export default React.memo(RepositoryList);

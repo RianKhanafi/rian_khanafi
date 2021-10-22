@@ -1,7 +1,7 @@
 import Input from "components/Input";
 import React, { useState } from "react";
 
-export default function GithubProfile({ hanleSearch, serach }) {
+const GithubProfile = ({ hanleSearch, serach }) => {
   return (
     <div>
       <h3>Find Repository by username</h3>
@@ -11,4 +11,6 @@ export default function GithubProfile({ hanleSearch, serach }) {
       </span>
     </div>
   );
-}
+};
+
+export default React.memo(GithubProfile);
