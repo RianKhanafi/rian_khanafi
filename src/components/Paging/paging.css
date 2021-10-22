@@ -1,0 +1,27 @@
+.paging-container{
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.paging-container div {
+   
+
+}
+
+.paging-container div button {
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    background-color: white;
+}
+
+.paging-container div button:hover {
+    background-color: #eaeaea;
+}
+
+.paging-container .page__nonactive button{
+    opacity: .7;
+    background-color: none;
+    cursor: not-allowed;
+}
