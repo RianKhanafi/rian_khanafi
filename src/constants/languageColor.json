@@ -1,0 +1,32 @@
+{
+    "JavaScript": {
+      "color": "#f1e05a"
+    },
+    "CSS": {
+      "color": "#563d7c"
+    },
+    "HTML": {
+      "color": "#e34c26"
+    },
+    "Dart": {
+      "color": "#00B4AB"
+    },
+    "PHP": {
+      "color": "#4F5D95"
+    },
+    "Go": {
+      "color": "#00ADD8"
+    },
+    "Python": {
+      "color": "#3572A5"
+    },
+    "C++": {
+      "color": "#f34b7d"
+    },
+    "C": {
+      "color": "#555555"
+    },
+    "C#": {
+      "color": "#178600"
+    }
+}
