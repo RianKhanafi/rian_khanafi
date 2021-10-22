@@ -1,5 +1,7 @@
 import axios from "config/axios";
 
 export default {
-  getAll: () => axios.get("/users/RianKhanafi/repos").then((res) => res),
+  getAll: (username) =>
+    axios.get(`/users/${username}/repos`).then((res) => res),
+  profile: () => axios.get("/users/RianKhanafi").then((res) => res),
 };
