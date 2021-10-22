@@ -1,6 +1,15 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
+
+.repositories-list .icon{
+  margin-right: 10px;
+}
+
+.repositories-list .input{
+  margin-bottom: 20px;
+}
+
 
 .App-logo {
   height: 40vmin;
