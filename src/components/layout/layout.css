@@ -1,0 +1,27 @@
+.layout{
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.layout aside.left-side {
+   
+    width: 40%;
+}
+
+.layout aside.left-side .left-content {
+    background-color: #eaeaea;
+    height: 100vh;
+    padding: 96px;
+}
+
+.layout section.right-side {
+    width: 60%;
+    overflow: auto;
+}
+
+.layout section.right-side .right-content {
+    background-color: white;
+    height: 100vh;
+    padding: 96px;
+}
