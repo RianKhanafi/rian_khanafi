@@ -1,7 +1,7 @@
 ## Rian_Khanafi test
 
 
-## Instalation
+## Installation
 Clone this repository
 ```
     $ git clone https://github.com/RianKhanafi/rian_khanafi.git
