@@ -4,7 +4,7 @@
 ## Instalation
 Clone this repository
 ```
-    $ git https://github.com/RianKhanafi/rian_khanafi.git
+    $ git clone https://github.com/RianKhanafi/rian_khanafi.git
     $ cd rian_khanafi
 ```
 
