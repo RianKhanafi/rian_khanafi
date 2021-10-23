@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import GithubProfile from "part/githubProfile";
+import GithubProfile from "part/searchGithub";
 import RepositoryList from "part/repositoryList";
 import { useEffect, useState } from "react";
 import "./App.css";
